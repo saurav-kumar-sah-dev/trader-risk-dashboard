@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Header */}
+
       <header className="border-b border-gray-800 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
@@ -30,21 +30,17 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-6">
-        {/* Row 1 */}
+
         <AccountSummary accountConfig={accountConfig} totalPnL={stats.totalPnL} />
 
-        {/* Row 2 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <RiskIndicator riskMetrics={riskMetrics} accountConfig={accountConfig} />
           <PerformanceStats stats={stats} />
         </div>
 
-        {/* Row 3 */}
         <EquityCurve data={equityData} startingBalance={accountConfig.startingBalance} />
 
-        {/* Row 4 */}
         <TradeTable trades={trades} />
       </main>
 

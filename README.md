@@ -1,58 +1,48 @@
-# Tradescape — Trader Risk Dashboard
+# 📊 Tradescape — Trader Risk Dashboard
 
-A lightweight trader risk dashboard built as part of the Tradescape
-Full Stack Developer assignment.
+A responsive, real-time trader risk dashboard built for the **Tradescape Full Stack Developer** assignment. It gives traders instant visibility into their account performance and — most importantly — how close they are to violating their account rules.
 
-## Live Demo
-[Link here after deployment]
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?logo=tailwindcss&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-2-FF6384)
+![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
 
-## Tech Stack
-- React + Vite
-- Tailwind CSS
-- Recharts
+---
 
-## How to Run
-git clone <your-repo>
+## 🔗 Live Demo
+
+**👉 [https://trader-risk-dashboard-nu.vercel.app/](https://trader-risk-dashboard-nu.vercel.app/)**
+
+## 💻 Source Code
+
+**👉 [github.com/saurav-kumar-sah-dev/trader-risk-dashboard](https://github.com/saurav-kumar-sah-dev/trader-risk-dashboard)**
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React 19 (Vite) |
+| Styling | Tailwind CSS v4 |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Deployment | Vercel |
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/saurav-kumar-sah-dev/trader-risk-dashboard.git
+
+# 2. Navigate into the folder
 cd trader-risk-dashboard
+
+# 3. Install dependencies
 npm install
+
+# 4. Start the dev server
 npm run dev
-
-## What I Built
-A responsive dashboard that shows a trader:
-- Account overview (starting balance, current balance, total P&L)
-- Performance stats (win rate, largest win/loss, avg win/loss)
-- A live risk monitor with progress bars showing drawdown and daily loss
-- A full trade history table
-- An equity curve (additional feature)
-
-## Additional Feature — Equity Curve
-I added an equity curve showing how the account balance
-changed after each trade.
-
-Why? P&L alone doesn't tell the full story. Two traders can have
-the same final P&L but very different risk journeys. An equity
-curve immediately reveals consistency, drawdown depth, and
-recovery patterns — all critical signals for a funded trader
-trying to stay within their account rules.
-
-## Product Questions
-
-**1. What is drawdown in trading?**
-Drawdown is the peak-to-trough decline in account balance from
-a previous high. It measures how far an account has fallen from
-its best point, expressed in dollars or as a percentage. It's
-the key metric prop firms use to limit trader risk.
-
-**2. Why does remaining drawdown matter more than just P&L?**
-P&L tells you where you are. Remaining drawdown tells you how
-much room you have left before you lose your account. A trader
-could be up $3,000 in P&L but have only $500 of drawdown buffer
-left — one bad trade ends their evaluation. Remaining drawdown
-is a survival metric.
-
-**3. If I had another day, what would I improve?**
-- Add trade filtering by asset or direction
-- Add a performance-by-asset breakdown (BTC vs ETH vs SOL)
-- Make the daily loss reset on a clock (simulate real-time)
-- Add a streak counter (current win/loss streak)
-- Add animated number transitions for a more polished feel

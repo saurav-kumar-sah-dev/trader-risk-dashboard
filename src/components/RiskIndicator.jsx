@@ -28,7 +28,7 @@ export default function RiskIndicator({ riskMetrics, accountConfig }) {
       </div>
 
       <div className="space-y-5">
-        {/* Drawdown */}
+
         <RiskBar
           label="Drawdown"
           current={currentDrawdown}
@@ -38,7 +38,7 @@ export default function RiskIndicator({ riskMetrics, accountConfig }) {
           cfg={cfg}
           fmt={fmt}
         />
-        {/* Daily Loss */}
+
         <RiskBar
           label="Daily Loss"
           current={dailyLoss}

@@ -23,17 +23,14 @@ export function calcPerformanceStats(trades) {
 export function calcRiskMetrics(trades, accountConfig) {
   const { startingBalance, currentBalance, maxDrawdown, dailyLossLimit } = accountConfig;
 
-  // Drawdown = how far current balance is below starting balance
   const currentDrawdown    = startingBalance - currentBalance;
   const remainingDrawdown  = maxDrawdown - Math.max(0, currentDrawdown);
 
-  // Daily loss = sum of losing trades today
   const dailyLoss          = trades
     .filter((t) => t.pnl < 0)
     .reduce((sum, t) => sum + t.pnl, 0);
-  const remainingDailyLoss = dailyLossLimit + dailyLoss; // dailyLoss is negative
+  const remainingDailyLoss = dailyLossLimit + dailyLoss; 
 
-  // Risk level logic
   const drawdownPct  = (Math.max(0, currentDrawdown) / maxDrawdown) * 100;
   const dailyLossPct = (Math.abs(dailyLoss) / dailyLossLimit) * 100;
   const maxPct       = Math.max(drawdownPct, dailyLossPct);
